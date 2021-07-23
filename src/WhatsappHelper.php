@@ -24,7 +24,7 @@ class WhatsappHelper
     public function getUnreadCount(): int
     {
         try {
-            $response = $this->client->get('/unread-number');
+            $response = $this->client->get('/unread-number', ['verify' => false],);
             if ($responseJson = json_decode($response->getBody()->getContents())) {
                 if ($responseJson->status == 'success' && $responseJson->unread_chats_count) {
                     return (int)$responseJson->unread_chats_count;
@@ -40,7 +40,7 @@ class WhatsappHelper
     public function checkNumber(): bool
     {
         try {
-            $response = $this->client->get('/check-phone');
+            $response = $this->client->get('/check-phone', ['verify' => false],);
             if ($responseJson = json_decode($response->getBody()->getContents())) {
                 if ($responseJson->status == 'success' && $responseJson->phone_has_whatsapp) {
                     return (bool)$responseJson->phone_has_whatsapp;
