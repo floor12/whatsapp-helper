@@ -57,7 +57,7 @@ class WhatsappHelperTest extends TestCase
 
     public function testHttpError()
     {
-        self::expectException(GuzzleHttp\Exception\ClientException::class);
+        self::expectException(floor12\whatsapp\WhatsappHelperException::class);
         $successResponse = ['status' => 'error'];
         $helper = new WhatsappHelper('some_token', 'some_url',
             self::makeClient(403, $successResponse));
