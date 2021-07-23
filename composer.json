@@ -1,5 +1,5 @@
 {
-  "name": "floor12/whatsapp-halper",
+  "name": "floor12/whatsapp-helper",
   "description": "Helper class to work with floor12 private whatsapp api server.",
   "type": "lib",
   "minimum-stability": "stable",
