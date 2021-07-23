@@ -1,0 +1,31 @@
+{
+  "name": "floor12/whatsapp-halper",
+  "description": "Helper class to work with floor12 private whatsapp api server.",
+  "type": "lib",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "floor12",
+      "email": "floor12@floor12.net",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.3 || ^8.0",
+    "guzzlehttp/guzzle": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "floor12\\whatsapp\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "floor12\\whatsapp\\tests\\": "tests/"
+    }
+  }
+}
